@@ -190,15 +190,22 @@ implemented as a named constant or a commented policy, not a silent guess.
 
 ### Screenshots
 
-_Add one screenshot per screen here after running locally:_
+Captured from a live run over the four sample supplier PDFs (Gemini 2.5 Flash).
 
-| Screen | Screenshot |
-|---|---|
-| Criteria | `docs/screenshots/criteria.png` |
-| Supplier input | `docs/screenshots/supplier-input.png` |
-| Leaderboard | `docs/screenshots/leaderboard.png` |
-| Detailed scorecard | `docs/screenshots/scorecard.png` |
-| Run details | `docs/screenshots/run-details.png` |
+**Criteria**
+![Criteria screen](docs/screenshots/criteria.png)
+
+**Supplier input**
+![Supplier input screen](docs/screenshots/supplier-input.png)
+
+**Leaderboard** (three ranked suppliers; one supplier with a corrupt PDF excluded from ranking)
+![Leaderboard screen](docs/screenshots/leaderboard.png)
+
+**Detailed scorecard**
+![Detailed scorecard screen](docs/screenshots/scorecard.png)
+
+**Run details**
+![Run details screen](docs/screenshots/run-details.png)
 
 ---
 

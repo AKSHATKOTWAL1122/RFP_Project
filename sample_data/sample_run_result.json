@@ -1,7 +1,7 @@
 {
-  "rfp_run_id": "6b692120-70e1-470b-b6ff-e95896f2fa3a",
+  "rfp_run_id": "1c49f520-5a40-4055-b1c7-4c2f0d9365ff",
   "status": "completed",
-  "created_at": "2026-08-30T08:04:11.830058+00:00",
+  "created_at": "2026-08-30T08:12:58.931208+00:00",
   "criterion_snapshot": [
     {
       "criterion_id": 1,
@@ -325,150 +325,6 @@
       "final_rank": 2
     },
     {
-      "supplier_name": "BrightPath Tech",
-      "failed": false,
-      "warnings": [],
-      "risks": [
-        "Limited compliance evidence may require additional due diligence before award.",
-        "Fast 10-week timeline assumes standard integrations and rapid client decisions, which may not materialize.",
-        "Several implementation assumptions could create change requests, potentially increasing cost and timeline.",
-        "The risk plan is limited to a short escalation statement and does not provide a detailed risk register.",
-        "No specific current security certification is identified, raising concerns about security posture.",
-        "Limited information about audit logging, privacy governance, or independent testing.",
-        "Critical incident response lacks a numeric Service Level Agreement (SLA).",
-        "Only one client reference is provided, and its project scope and outcomes are not quantified, limiting evidence of relevant experience.",
-        "Complex custom integrations and extended premium support are additional costs not included in the base proposal."
-      ],
-      "overall_summary": "BrightPath Tech offers a commercially attractive proposal with the lowest price and a fast 10-week deployment timeline for a configurable SaaS workflow platform. The technical solution appears sound, with good integration capabilities and scalability. However, the proposal has significant weaknesses in security and compliance, providing very limited detail on controls, certifications, privacy, and auditability. The implementation plan, while clear, relies heavily on assumptions and lacks a detailed risk register. Furthermore, the supplier's experience and references are limited, with only one unquantified client reference. While strong on cost and speed, the lack of detail in critical areas like security and comprehensive risk management, coupled with limited experience, presents notable risks.",
-      "criteria_snapshot": [
-        {
-          "criterion_id": 1,
-          "name": "Technical Capability",
-          "description": "Architecture, integrations, scalability, technical fit",
-          "weight": 30.0,
-          "max_score": 10.0,
-          "is_active": true
-        },
-        {
-          "criterion_id": 2,
-          "name": "Implementation Plan",
-          "description": "Timeline, milestones, staffing, risk plan",
-          "weight": 20.0,
-          "max_score": 10.0,
-          "is_active": true
-        },
-        {
-          "criterion_id": 3,
-          "name": "Commercial Value",
-          "description": "Pricing clarity, total cost, assumptions",
-          "weight": 20.0,
-          "max_score": 10.0,
-          "is_active": true
-        },
-        {
-          "criterion_id": 4,
-          "name": "Security & Compliance",
-          "description": "Controls, certifications, privacy, auditability",
-          "weight": 20.0,
-          "max_score": 10.0,
-          "is_active": true
-        },
-        {
-          "criterion_id": 5,
-          "name": "Support & Experience",
-          "description": "Support model, similar projects, references",
-          "weight": 10.0,
-          "max_score": 10.0,
-          "is_active": true
-        }
-      ],
-      "scored_criteria": [
-        {
-          "criterion": {
-            "criterion_id": 1,
-            "name": "Technical Capability",
-            "description": "Architecture, integrations, scalability, technical fit",
-            "weight": 30.0,
-            "max_score": 10.0,
-            "is_active": true
-          },
-          "score": 8.0,
-          "benchmark": 9.5,
-          "gap": -1.5,
-          "relative_pct": 84.21052631578947,
-          "justification": "The proposed solution offers a configurable SaaS platform with flexible deployment options (single-tenant or shared), standard REST APIs, and prebuilt connectors, indicating good technical fit and integration capabilities. The 'configuration-first approach' aims to minimize custom development, which is a positive. Scalability is addressed with a target capacity of 5,000 concurrent users. The architecture seems sound for the stated requirements.",
-          "evidence": "\u2022 Single-tenant or shared SaaS deployment options with configurable workflows.\n\u2022 Standard REST APIs and prebuilt connectors for common business systems.\n\u2022 Target capacity of approximately 5,000 concurrent users.\n\u2022 Configuration-first approach intended to minimize custom development."
-        },
-        {
-          "criterion": {
-            "criterion_id": 2,
-            "name": "Implementation Plan",
-            "description": "Timeline, milestones, staffing, risk plan",
-            "weight": 20.0,
-            "max_score": 10.0,
-            "is_active": true
-          },
-          "score": 6.5,
-          "benchmark": 9.5,
-          "gap": -3.0,
-          "relative_pct": 68.42105263157895,
-          "justification": "The implementation plan provides a clear, fast 10-week timeline with defined milestones and primary outputs. The core delivery team structure is outlined. However, the risk plan is explicitly stated as 'limited to a short escalation statement' and lacks a detailed risk register. Several critical assumptions are highlighted, which could lead to change requests and impact the timeline, reducing the overall strength of the plan.",
-          "evidence": "\u2022 10-week timeline with discovery, configuration, integration, testing, training, and go-live.\n\u2022 Delivery team listed as 1 project manager, 3 implementation consultants, and shared QA resources.\n\u2022 Daily stand-ups during configuration; weekly status reports.\n\u2022 Risk plan is limited to a short escalation statement and does not provide a detailed risk register.\n\u2022 Fast 10-week timeline assumes standard integrations and rapid client decisions.\n\u2022 Several implementation assumptions could create change requests."
-        },
-        {
-          "criterion": {
-            "criterion_id": 3,
-            "name": "Commercial Value",
-            "description": "Pricing clarity, total cost, assumptions",
-            "weight": 20.0,
-            "max_score": 10.0,
-            "is_active": true
-          },
-          "score": 9.0,
-          "benchmark": 9.0,
-          "gap": 0.0,
-          "relative_pct": 100.0,
-          "justification": "The commercial proposal is clear, with a detailed price table for implementation, licensing, training, and support, totaling $320,000 for Year 1. It explicitly states this is the 'Lowest offer in the demonstration set,' indicating strong commercial value. Assumptions for each item are clearly listed, providing transparency. However, the proposal notes that complex custom integrations and extended premium support are additional, which could increase the total cost if required.",
-          "evidence": "Item | Price | Assumptions\nImplementation services | $165,000 | Fixed fee; assumes standard configuration.\nYear 1 licensing | $95,000 | Up to 7,500 users; standard workflow modules.\nTraining | $20,000 | Four remote training sessions.\nYear 1 support | $40,000 | Business-hours support; premium option available.\nTotal Year 1 | $320,000 | Lowest offer in the demonstration set.\n\u2022 Price assumes standard configuration and standard connectors.\n\u2022 Complex custom integrations and extended premium support are additional."
-        },
-        {
-          "criterion": {
-            "criterion_id": 4,
-            "name": "Security & Compliance",
-            "description": "Controls, certifications, privacy, auditability",
-            "weight": 20.0,
-            "max_score": 10.0,
-            "is_active": true
-          },
-          "score": 3.0,
-          "benchmark": 9.5,
-          "gap": -6.5,
-          "relative_pct": 31.57894736842105,
-          "justification": "The proposal provides very limited detail regarding security and compliance. While it mentions data encryption in transit and at rest, it lacks algorithm specifics. There are no specific current certifications identified, only a general 'alignment with common security practices.' Crucially, information on audit logging, privacy governance, independent testing, and numeric SLAs for critical incident response is missing or vague. This represents a significant gap in demonstrating robust security and compliance.",
-          "evidence": "\u2022 States that data will be encrypted in transit and at rest but does not provide algorithm detail.\n\u2022 Mentions alignment with common security practices; no specific current certification is identified.\n\u2022 Provides limited information about audit logging, privacy governance, or independent testing.\n\u2022 Critical incident response is described as 'priority handling' without a numeric SLA in the proposal.\n\u2022 Limited compliance evidence may require additional due diligence before award."
-        },
-        {
-          "criterion": {
-            "criterion_id": 5,
-            "name": "Support & Experience",
-            "description": "Support model, similar projects, references",
-            "weight": 10.0,
-            "max_score": 10.0,
-            "is_active": true
-          },
-          "score": 5.0,
-          "benchmark": 9.5,
-          "gap": -4.5,
-          "relative_pct": 52.63157894736842,
-          "justification": "The support model is adequately described, offering business-hours help desk with an optional premium 24x7 service and standard customer success check-ins. However, the experience and references section is weak. Only one client reference is named at a high level, with no quantification of project scope or outcomes. The proposal itself acknowledges 'fewer supporting references than the other suppliers' and 'limited experience,' which aligns with the provided 'Supplier experience rating: 6 / 10'.",
-          "evidence": "\u2022 Business-hours help desk with optional premium 24x7 support.\n\u2022 Standard customer success check-ins are described.\n\u2022 One client reference is named at a high level, but project scope and outcomes are not quantified.\n\u2022 Fewer supporting references than the other suppliers.\n\u2022 Supplier experience rating: 6 / 10 (provided by procurement for demonstration)\n\u2022 Supplier synthetic profile: ...limited experience."
-        }
-      ],
-      "absolute_score": 66.0,
-      "ppi": 70.52631578947368,
-      "final_rank": 3
-    },
-    {
       "supplier_name": "Orbit Digital",
       "failed": false,
       "warnings": [],
@@ -612,6 +468,148 @@
       ],
       "absolute_score": 64.0,
       "ppi": 68.30409356725147,
+      "final_rank": 3
+    },
+    {
+      "supplier_name": "BrightPath Tech",
+      "failed": false,
+      "warnings": [],
+      "risks": [
+        "Limited compliance evidence may require additional due diligence before award.",
+        "Fast 10-week timeline assumes standard integrations and rapid client decisions, which may not materialize.",
+        "Several implementation assumptions could create change requests, potentially increasing cost and timeline.",
+        "Risk plan is limited to a short escalation statement and does not provide a detailed risk register.",
+        "Limited security/compliance detail, including lack of specific certifications, audit logging, privacy governance, independent testing, and numeric SLAs for incident response.",
+        "Fewer supporting references than other suppliers, with the single named reference lacking quantified project scope and outcomes.",
+        "Complex custom integrations and extended premium support are additional costs not included in the base proposal."
+      ],
+      "overall_summary": "BrightPath Tech offers a commercially attractive proposal with the lowest price and a fast 10-week deployment for a configurable SaaS workflow platform. The technical solution appears sound, supporting scalability and integration through standard APIs and connectors. However, the proposal has significant weaknesses in security and compliance, providing limited detail on controls, certifications, privacy, and auditability. The implementation plan, while detailed in timeline and staffing, has a weak risk plan. Furthermore, the supplier's experience and references are limited, with only one high-level, unquantified reference provided. Overall, the proposal presents a cost-effective and rapid deployment option but carries notable risks related to security, compliance, and the depth of the supplier's experience and risk management.",
+      "criteria_snapshot": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "description": "Architecture, integrations, scalability, technical fit",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "description": "Timeline, milestones, staffing, risk plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "description": "Pricing clarity, total cost, assumptions",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "description": "Controls, certifications, privacy, auditability",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "description": "Support model, similar projects, references",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "is_active": true
+        }
+      ],
+      "scored_criteria": [
+        {
+          "criterion": {
+            "criterion_id": 1,
+            "name": "Technical Capability",
+            "description": "Architecture, integrations, scalability, technical fit",
+            "weight": 30.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 7.5,
+          "benchmark": 9.5,
+          "gap": -2.0,
+          "relative_pct": 78.94736842105263,
+          "justification": "The proposed solution offers a configurable SaaS platform with single-tenant or shared options, standard REST APIs, and prebuilt connectors, indicating good technical fit for integration. It targets a capacity of 5,000 concurrent users and emphasizes a configuration-first approach to minimize custom development. This demonstrates a solid architectural foundation and scalability for the stated requirements.",
+          "evidence": "\u2022 Single-tenant or shared SaaS deployment options with configurable workflows.\n\u2022 Standard REST APIs and prebuilt connectors for common business systems.\n\u2022 Target capacity of approximately 5,000 concurrent users.\n\u2022 Configuration-first approach intended to minimize custom development."
+        },
+        {
+          "criterion": {
+            "criterion_id": 2,
+            "name": "Implementation Plan",
+            "description": "Timeline, milestones, staffing, risk plan",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 6.0,
+          "benchmark": 9.5,
+          "gap": -3.5,
+          "relative_pct": 63.1578947368421,
+          "justification": "The proposal provides a clear, fast 10-week timeline with defined milestones and primary outputs. The delivery team structure is specified (1 project manager, 3 implementation consultants, shared QA). However, the risk plan is explicitly stated as 'limited to a short escalation statement' and 'does not provide a detailed risk register.' It also highlights risks related to compliance evidence, assumptions about standard integrations, rapid client decisions, and potential change requests due to implementation assumptions, which significantly weakens this criterion.",
+          "evidence": "\u2022 10-week timeline with discovery, configuration, integration, testing, training, and go-live.\nMilestone: 1. Discovery (Weeks 1-2), 2. Configuration (Weeks 3-5), 3. Integration (Weeks 6-7), 4. Testing & training (Weeks 8-9), 5. Go-live (Week 10).\nTeam structure: Core team: project manager and three implementation consultants, supported by shared QA resources.\nRisk plan is limited to a short escalation statement and does not provide a detailed risk register.\nRisk controls: Limited compliance evidence may require additional due diligence before award. Fast 10-week timeline assumes standard integrations and rapid client decisions. Several implementation assumptions could create change requests."
+        },
+        {
+          "criterion": {
+            "criterion_id": 3,
+            "name": "Commercial Value",
+            "description": "Pricing clarity, total cost, assumptions",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "The commercial proposal is clear, providing a detailed breakdown of costs for implementation services, Year 1 licensing, training, and Year 1 support, totaling $320,000. It explicitly states this is the 'Lowest offer in the demonstration set.' Key assumptions for each item are provided, such as 'Fixed fee; assumes standard configuration' for implementation and 'Up to 7,500 users; standard workflow modules' for licensing. The proposal also clarifies that complex custom integrations and extended premium support are additional, ensuring transparency regarding potential extra costs.",
+          "evidence": "Item: Implementation services ($165,000, Fixed fee; assumes standard configuration), Year 1 licensing ($95,000, Up to 7,500 users; standard workflow modules), Training ($20,000, Four remote training sessions), Year 1 support ($40,000, Business-hours support; premium option available).\nTotal Year 1: $320,000. Lowest offer in the demonstration set.\nAssumptions: Price assumes standard configuration and standard connectors. Complex custom integrations and extended premium support are additional. Client decisions and data readiness are assumed to be available on schedule."
+        },
+        {
+          "criterion": {
+            "criterion_id": 4,
+            "name": "Security & Compliance",
+            "description": "Controls, certifications, privacy, auditability",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 3.0,
+          "benchmark": 9.5,
+          "gap": -6.5,
+          "relative_pct": 31.57894736842105,
+          "justification": "The proposal states data encryption in transit and at rest but lacks algorithm detail. It mentions alignment with common security practices but identifies no specific current certifications. Crucially, it provides 'limited information about audit logging, privacy governance, or independent testing' and describes critical incident response as 'priority handling' without a numeric SLA. The proposal itself notes 'Limited compliance evidence may require additional due diligence before award,' indicating significant gaps in security and compliance detail.",
+          "evidence": "\u2022 States that data will be encrypted in transit and at rest but does not provide algorithm detail.\n\u2022 Mentions alignment with common security practices; no specific current certification is identified.\n\u2022 Provides limited information about audit logging, privacy governance, or independent testing.\n\u2022 Critical incident response is described as 'priority handling' without a numeric SLA in the proposal.\n\u2022 Limited compliance evidence may require additional due diligence before award."
+        },
+        {
+          "criterion": {
+            "criterion_id": 5,
+            "name": "Support & Experience",
+            "description": "Support model, similar projects, references",
+            "weight": 10.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 4.0,
+          "benchmark": 9.5,
+          "gap": -5.5,
+          "relative_pct": 42.10526315789473,
+          "justification": "The support model includes a business-hours help desk with an optional premium 24x7 support and standard customer success check-ins. However, the proposal explicitly states 'limited experience' and 'fewer supporting references than the other suppliers.' Only 'one client reference is named at a high level, but project scope and outcomes are not quantified,' which significantly limits the ability to assess relevant experience and past project success.",
+          "evidence": "\u2022 Business-hours help desk with optional premium 24x7 support.\n\u2022 Standard customer success check-ins are described.\n\u2022 One client reference is named at a high level, but project scope and outcomes are not quantified.\nSupplier synthetic profile: Lowest price and fast timeline; weak compliance detail and limited experience.\nThe proposal is commercially attractive, but it contains limited security/compliance detail and fewer supporting references than the other suppliers."
+        }
+      ],
+      "absolute_score": 62.5,
+      "ppi": 66.8421052631579,
       "final_rank": 4
     }
   ],

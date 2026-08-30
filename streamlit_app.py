@@ -18,6 +18,7 @@ import streamlit as st
 from dotenv import load_dotenv
 
 import database
+import ui_theme
 from models import EXPERIENCE_RATING_MAX, EXPERIENCE_RATING_MIN
 
 # Load .env from next to this file, overriding any empty/stale shell var of the
@@ -34,7 +35,12 @@ for _k in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
     except Exception:
         pass
 
-st.set_page_config(page_title="RFP Evaluation & Supplier Ranking", layout="wide")
+st.set_page_config(
+    page_title="RFP Evaluation & Supplier Ranking",
+    page_icon="◈",
+    layout="wide",
+)
+ui_theme.inject(st)
 
 database.setup_database()
 
@@ -78,7 +84,14 @@ def _snapshot_of(rows) -> list[dict]:
 # Screen 1 — Criteria (display + management)
 # --------------------------------------------------------------------------- #
 def screen_criteria() -> None:
-    st.header("Criteria")
+    ui_theme.screen_header(
+        st,
+        step="Step 01",
+        kicker="Configure",
+        title="Evaluation criteria",
+        purpose="The weighted rubric every supplier in a run is scored against. "
+        "Active weights must total 100% before a run can start.",
+    )
     locked = database.is_run_in_progress()
     if locked:
         st.warning(
@@ -172,7 +185,14 @@ def screen_criteria() -> None:
 # Screen 2 — Supplier input
 # --------------------------------------------------------------------------- #
 def screen_supplier_input() -> None:
-    st.header("Supplier input")
+    ui_theme.screen_header(
+        st,
+        step="Step 02",
+        kicker="Intake",
+        title="Supplier submissions",
+        purpose="Upload each supplier's RFP PDF and its metadata, then start the "
+        "run. The criterion snapshot freezes the moment you click Evaluate.",
+    )
 
     if database.is_run_in_progress():
         st.warning("A run is already in progress. Wait for it to finish.")
@@ -248,7 +268,14 @@ def screen_supplier_input() -> None:
 # Screen 3 — Leaderboard
 # --------------------------------------------------------------------------- #
 def screen_leaderboard() -> None:
-    st.header("Leaderboard")
+    ui_theme.screen_header(
+        st,
+        step="Steps 06–08",
+        kicker="Rank",
+        title="Supplier leaderboard",
+        purpose="Ranked by Price-Performance Index — each supplier's weighted "
+        "performance relative to the best score seen on every criterion (the frontier, PPI 100).",
+    )
     rfp_run_id = _run_selector("lb_run")
     if not rfp_run_id:
         return
@@ -256,21 +283,9 @@ def screen_leaderboard() -> None:
     st.caption(f"Run {rfp_run_id} · status: {run['status']}")
 
     if ranked:
-        st.table(
-            [
-                {
-                    "Rank": r["final_rank"],
-                    "Supplier": r["supplier_name"],
-                    "Absolute score": round(r["absolute_score"], 2) if r["absolute_score"] is not None else None,
-                    "PPI": round(r["ppi"], 2) if r["ppi"] is not None else None,
-                    "Submission date": r["submission_date"],
-                    "Experience": r["experience_rating"],
-                }
-                for r in ranked
-            ]
-        )
+        ui_theme.leaderboard(st, ranked)
     else:
-        st.info("No ranked suppliers in this run.")
+        st.info("No ranked suppliers in this run. Check the exclusions below or start a new run.")
 
     if failed:
         st.subheader("Excluded from ranking")
@@ -335,7 +350,14 @@ def _whatif(rfp_run_id: str, ranked: list) -> None:
 # Screen 4 — Detailed scorecard
 # --------------------------------------------------------------------------- #
 def screen_scorecard() -> None:
-    st.header("Detailed scorecard")
+    ui_theme.screen_header(
+        st,
+        step="Step 10",
+        kicker="Explain",
+        title="Detailed scorecard",
+        purpose="Per-criterion breakdown for one supplier: the LLM's score and "
+        "evidence, then the deterministic benchmark, gap, and relative performance.",
+    )
     rfp_run_id = _run_selector("sc_run")
     if not rfp_run_id:
         return
@@ -383,7 +405,14 @@ def screen_scorecard() -> None:
 # Screen 5 — Run details
 # --------------------------------------------------------------------------- #
 def screen_run_details() -> None:
-    st.header("Run details")
+    ui_theme.screen_header(
+        st,
+        step="Step 09",
+        kicker="Audit",
+        title="Run details",
+        purpose="The frozen record of one run — warnings raised, the tie-break "
+        "keys applied in order, and the full result as downloadable JSON.",
+    )
     rfp_run_id = _run_selector("rd_run")
     if not rfp_run_id:
         return
@@ -449,6 +478,22 @@ SCREENS = {
     "Run details": screen_run_details,
 }
 
-st.sidebar.title("RFP Evaluation")
-choice = st.sidebar.radio("Screen", list(SCREENS))
+st.sidebar.markdown(
+    "<div style='font-family:\"Space Grotesk\",sans-serif;font-size:1.15rem;"
+    "font-weight:700;letter-spacing:-0.01em;color:#fff;margin-bottom:0.15rem'>"
+    "◈ RFP Evaluation</div>"
+    "<div style='font-family:\"IBM Plex Mono\",monospace;font-size:0.68rem;"
+    "letter-spacing:0.12em;text-transform:uppercase;color:#8FB6B6'>"
+    "Supplier ranking worksheet</div>",
+    unsafe_allow_html=True,
+)
+st.sidebar.markdown("<div style='height:1px;background:#2b3947;margin:1rem 0'></div>", unsafe_allow_html=True)
+st.sidebar.title("Workflow")
+choice = st.sidebar.radio("Screen", list(SCREENS), label_visibility="collapsed")
+st.sidebar.markdown(
+    "<div style='position:fixed;bottom:1rem;font-family:\"IBM Plex Mono\",monospace;"
+    "font-size:0.64rem;letter-spacing:0.08em;color:#4a5765'>"
+    "LLM JUDGES CONTENT · PYTHON DECIDES RANK</div>",
+    unsafe_allow_html=True,
+)
 SCREENS[choice]()

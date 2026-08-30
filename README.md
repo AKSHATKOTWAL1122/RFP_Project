@@ -202,13 +202,13 @@ _Add one screenshot per screen here after running locally:_
 
 ## 6. Demonstration
 
-- **`notebooks/collaboration.ipynb`** runs the full pipeline top-to-bottom against the
-  real project modules (setup → criteria → extraction → LLM → validation → scoring →
-  benchmark → PPI → ranking → persistence) and demonstrates all 11 items of the Edge
-  Case Checklist (`PLAN.md`), including a deliberately corrupted PDF that surfaces a
-  warning while the rest of the batch completes.
+- Run the app, evaluate the four sample suppliers, and confirm the Leaderboard, the
+  Detailed scorecard, and the Run details warnings.
+- For the required error case, include one corrupt / unreadable PDF in the batch: it
+  appears under "Excluded from ranking" with a warning in Run details, while the rest
+  of the batch completes and ranks normally.
 - **`sample_data/sample_run_result.json`** — a real completed run exported via the Run
-  Details download button.
+  Details "Download full run as JSON" button.
 
 ---
 

@@ -1,10 +1,10 @@
 # Phase 6 — Polish & Submission
 
-Files: `README.md`, `sample_data/sample_run_result.json`, `notebooks/collaboration.ipynb`, deployment
+Files: `README.md`, `sample_data/sample_run_result.json`, deployment
 
 ## Scope
 
-Close out every submission requirement from the brief that isn't already satisfied by Phases 1-5, and finish updating the notebook into a real demonstration artifact.
+Close out every submission requirement from the brief that isn't already satisfied by Phases 1-5.
 
 ## Deliverables
 
@@ -20,7 +20,6 @@ Close out every submission requirement from the brief that isn't already satisfi
     - Failed-supplier policy — excluded from ranking with NULL score/ppi/rank, rather than scored 0
   - Screenshots of each of the 5 screens
   - Streamlit Community Cloud deployment steps
-- Update `notebooks/collaboration.ipynb` to progressively demonstrate the real pipeline, cell by cell: setup → criteria → extraction → LLM call → validation → scoring → benchmark → PPI → ranking → persistence — calling into the actual modules (`database.py`, `document_tool.py`, `evaluation_agent.py`, `validation_tool.py`, `scoring.py`, `ranking.py`, `orchestrator.py`), not restating them in prose. Include the full Edge Case Checklist (11 items from `PLAN.md`) as demonstrated cells.
 - Export one real completed run to `sample_data/sample_run_result.json` (via the Run Details download, using verified real supplier PDFs)
 - Demonstration: one successful full run, plus at least one deliberately triggered validation/error case (e.g. a corrupted PDF, or a temporarily invalid API key) showing a warning surfaced in Run Details while the rest of the batch still completes
 - Pin `requirements.txt` to the exact versions verified working locally (replacing the unpinned Phase 1 list)
@@ -29,7 +28,6 @@ Close out every submission requirement from the brief that isn't already satisfi
 ## Done-check
 
 - README is complete enough that a stranger could clone the repo and run the app from scratch, and its Assumptions section covers every item listed above
-- `notebooks/collaboration.ipynb` runs top-to-bottom and demonstrates the full pipeline plus all 11 edge cases, calling real project modules
 - `sample_data/sample_run_result.json` exists and matches the shape produced by the Run Details download button
 - The demo covers both a clean successful run and a deliberately broken input, with the resulting warning visible in the UI
 - `requirements.txt` is pinned to verified versions

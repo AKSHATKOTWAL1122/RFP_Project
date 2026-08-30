@@ -4,7 +4,7 @@
 
 ## Context
 
-This is a classroom mini-project (brief fully captured in `Agentic_RFP_Evaluation_Mini_Project.md`) requiring an AI-assisted Streamlit app that scores supplier RFP PDFs against configurable criteria, benchmarks suppliers against peers, and produces an explainable, deterministic leaderboard. The repo is currently empty (just the brief and an empty notebook) — this is a from-scratch build.
+This is a classroom mini-project (brief fully captured in `Agentic_RFP_Evaluation_Mini_Project.md`) requiring an AI-assisted Streamlit app that scores supplier RFP PDFs against configurable criteria, benchmarks suppliers against peers, and produces an explainable, deterministic leaderboard. The repo is currently empty (just the brief) — this is a from-scratch build.
 
 User constraints locked in for this build:
 - **LLM**: Gemini 2.5 Flash, called through **LangChain** (`langchain-google-genai`), not the raw SDK. API key from env var, never hardcoded.
@@ -12,13 +12,13 @@ User constraints locked in for this build:
 - **Sample PDFs**: user supplies their own 4+ supplier PDFs — must be verified against the brief's required profiles/sections before use (see Data Preparation Checklist).
 - **Deployment**: build and verify locally first; actually deploy to Streamlit Community Cloud as the final step (mandatory per the brief's submission requirements, not optional).
 - **Code shape**: one clear component per file, mirroring the brief's own named components (Document Tool, Evaluation Agent, Validation Tool, Scoring, Ranking, Database, Orchestrator). Comments allowed and encouraged where a rule isn't self-evident (e.g. the zero-benchmark policy) — kept minimal elsewhere.
-- **Process**: spec-driven development, work divided into phases; a `CLAUDE.md` at the project root gives every future session the same context automatically; `notebooks/collaboration.ipynb` is an **active** development/demo artifact, updated as each phase lands.
+- **Process**: spec-driven development, work divided into phases; a `CLAUDE.md` at the project root gives every future session the same context automatically.
 
 **Tech stack decisions:**
 - Validation: **Pydantic** models for the LLM output schema and normalized results.
 - Tables in Streamlit: **plain lists/dicts** passed straight to `st.dataframe`/`st.table` — no pandas dependency.
 - PDF extraction: **PyMuPDF only** — no pypdf fallback, one dependency.
-- Testing: no pytest framework, but a **defined set of edge-case fixtures** (see Edge Case Checklist) must be demonstrated, ideally in the collaboration notebook.
+- Testing: no pytest framework, but a **defined set of edge-case fixtures** (see Edge Case Checklist) must be demonstrated via each phase's done-check.
 - **LLM call uses LangChain**, scoped to just the Evaluate step (`evaluation_agent.py`):
   - `langchain-google-genai` (`ChatGoogleGenerativeAI`) as the Gemini 2.5 Flash chat model.
   - `ChatPromptTemplate` builds the evaluation prompt, injecting each active criterion's **exact inspection guidance from the brief** (not just its name) — e.g. Technical Capability → "architecture, integrations, scalability, technical fit" — verbatim as the `description` field, sourced from the DB.
@@ -36,13 +36,12 @@ User constraints locked in for this build:
 7. **Failed-supplier ranking policy defined.** A supplier whose PDF can't be extracted or whose LLM call fails after retries is persisted with `absolute_score = NULL`, `ppi = NULL`, `final_rank = NULL`, and a warning in `result_json` — excluded from the official ranking rather than silently scored as 0. The UI shows them separately with an "Evaluation failed" badge.
 8. **Experience-rating scale is a documented, named constant**, not a silent assumption — defined once, called out in README's Assumptions, and easy to change.
 9. **Component separation clarified** — `document_tool.py`, `evaluation_agent.py`, `validation_tool.py` are distinct files, not folded into one `evaluation.py`; `scoring.py` (absolute score + peer metrics + PPI) and `ranking.py` (tie-break + rank assignment) are separate files with clearly separated functions.
-10. **Collaboration notebook is an active artifact.** It's updated phase-by-phase to progressively call into the real modules and demonstrate the workflow and edge cases — not left as a static outline.
-11. **Edge Case Checklist added** (10 cases) as an explicit, demonstrable list rather than an implicit "handle errors" note.
-12. **Data Preparation Checklist added** — the user's supplied PDFs must be explicitly verified against the brief's 4 required supplier profiles and required proposal sections before being treated as satisfying that deliverable.
-13. **What-if re-ranking marked explicitly optional**, built only after the required workflow is fully working — not on the critical path.
-14. **"No code comments" rule removed.** Comments are allowed and encouraged around non-obvious rules (zero-benchmark policy, normalization policy, tie-break order, snapshot rationale) — kept minimal elsewhere.
-15. **Dependency pinning deferred.** Build and verify locally first; record the actually-working versions in `requirements.txt` afterward, rather than guessing pins upfront.
-16. Formulas, tie-break order, and the LLM/deterministic-arithmetic separation were already correct — unchanged.
+10. **Edge Case Checklist added** (11 cases) as an explicit, demonstrable list rather than an implicit "handle errors" note.
+11. **Data Preparation Checklist added** — the user's supplied PDFs must be explicitly verified against the brief's 4 required supplier profiles and required proposal sections before being treated as satisfying that deliverable.
+12. **What-if re-ranking marked explicitly optional**, built only after the required workflow is fully working — not on the critical path.
+13. **"No code comments" rule removed.** Comments are allowed and encouraged around non-obvious rules (zero-benchmark policy, normalization policy, tie-break order, snapshot rationale) — kept minimal elsewhere.
+14. **Dependency pinning deferred.** Build and verify locally first; record the actually-working versions in `requirements.txt` afterward, rather than guessing pins upfront.
+15. Formulas, tie-break order, and the LLM/deterministic-arithmetic separation were already correct — unchanged.
 
 ## Data Preparation Checklist (must pass before Phase 2's smoke test)
 
@@ -60,7 +59,7 @@ The brief requires ≥4 fictional supplier PDFs with **specific profiles** and *
 
 If the user's PDFs don't clearly satisfy this, flag it before proceeding — don't silently treat any 4 PDFs as sufficient.
 
-## Edge Case Checklist (must be demonstrable, ideally in the notebook)
+## Edge Case Checklist (must be demonstrable via each phase's done-check)
 
 1. Valid evaluation (happy path)
 2. LLM response missing an active criterion → defaulted to 0, warned
@@ -104,8 +103,7 @@ Industry_project/
 │   └── sample_pdfs/              # user's supplier PDFs — verified against the Data Preparation Checklist
 ├── sample_data/
 │   └── sample_run_result.json    # exported example of one completed run (Phase 6)
-├── Agentic_RFP_Evaluation_Mini_Project.{pdf,md}   # existing brief
-└── notebooks/collaboration.ipynb # ACTIVE dev/demo notebook, updated phase-by-phase
+└── Agentic_RFP_Evaluation_Mini_Project.{pdf,md}   # existing brief
 ```
 
 Each file maps to exactly one of the brief's named components or steps — `document_tool.py` (step 4 extraction), `evaluation_agent.py` (step 4 LLM call), `validation_tool.py` (step 5), `scoring.py` (steps 6-7 + PPI), `ranking.py` (step 8), `database.py` (steps 1 + 9), `orchestrator.py` (controls 1, 3-9), `streamlit_app.py` (steps 2 + 10).
@@ -116,7 +114,6 @@ Each file maps to exactly one of the brief's named components or steps — `docu
 - Tech stack: Streamlit, SQLite (stdlib `sqlite3`), Gemini 2.5 Flash via LangChain, Pydantic, PyMuPDF.
 - File map with one line per file (as above).
 - Hard constraints: LLM never does arithmetic/ranking; tie-break order is fixed; API keys only via env/`st.secrets`; criteria are **never hard-deleted**, only deactivated; the run's criterion snapshot is taken once at Batch time and reused for every supplier in that run — never re-loaded per supplier; failed suppliers are excluded from ranking (NULL score/ppi/rank), never silently scored 0; comments are welcome around non-obvious rules, not banned.
-- Note that `notebooks/collaboration.ipynb` is updated alongside each phase to demonstrate the real workflow and the Edge Case Checklist — not a static artifact.
 - Phase pointer table.
 
 ## Spec Phases
@@ -179,9 +176,8 @@ Each file maps to exactly one of the brief's named components or steps — `docu
 
 **Phase 6 — Polish & Submission**
 - `README.md`: setup, architecture (the 8-file/10-step map), formulas, **Assumptions section** listing every documented assumption (malformed-JSON policy, zero-benchmark policy, experience-rating scale, criterion-snapshot rationale), screenshots, Streamlit Cloud deployment steps.
-- Update `notebooks/collaboration.ipynb` to progressively demonstrate: setup → criteria → extraction → LLM → validation → scoring → benchmark → PPI → ranking → persistence, plus the Edge Case Checklist.
-- Export one real completed run to `sample_data/sample_run_result.json`.
-- Demonstrate one successful run plus at least one deliberate error case.
+- Export one real completed run to `sample_data/sample_run_result.json` via the Run Details JSON download.
+- Demonstrate one successful run plus at least one deliberate error case (warning surfaced in Run Details while the rest of the batch completes).
 - **Deploy to Streamlit Community Cloud**, record the public URL, and pin `requirements.txt` to the versions actually verified working locally.
 
 ## requirements.txt

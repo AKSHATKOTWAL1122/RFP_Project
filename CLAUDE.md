@@ -49,7 +49,7 @@ Each file maps to exactly one of the brief's named components/steps.
 
 Spec-driven, 6 phases under `specs/`, done in order (1 → 6) since each depends on the previous. Read (and update if needed) a phase's spec file before writing its code.
 
-`notebooks/collaboration.ipynb` is an **active** development/demo artifact — update it alongside each phase to progressively call into the real modules and demonstrate the workflow (setup → criteria → extraction → LLM → validation → scoring → benchmark → PPI → ranking → persistence) plus the Edge Case Checklist (see `PLAN.md`). It is not a static outline.
+The Edge Case Checklist (see `PLAN.md`) must be demonstrated as it lands each phase — via the module tests / done-checks in each phase spec.
 
 | Phase | Spec file | Delivers |
 |---|---|---|
@@ -58,6 +58,6 @@ Spec-driven, 6 phases under `specs/`, done in order (1 → 6) since each depends
 | 3 | `specs/phase-3-validation-scoring.md` | Response normalization (with corrected missing-ID handling), scoring formulas |
 | 4 | `specs/phase-4-ranking-orchestration.md` | Tie-break ranking, frozen-snapshot orchestration, failed-supplier exclusion |
 | 5 | `specs/phase-5-streamlit-ui.md` | All 5 UI screens, criteria management (no delete), optional what-if re-ranking |
-| 6 | `specs/phase-6-polish-submission.md` | README with Assumptions section, notebook demo, sample JSON, deployment |
+| 6 | `specs/phase-6-polish-submission.md` | README with Assumptions section, sample JSON, deployment |
 
 See `PLAN.md` for full rationale, the Data Preparation Checklist (verifying user-supplied PDFs against the brief's required profiles/sections), the Edge Case Checklist, and every correction applied after the brief-compliance review.

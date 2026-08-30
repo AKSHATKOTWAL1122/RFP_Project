@@ -190,7 +190,11 @@ implemented as a named constant or a commented policy, not a silent guess.
 
 ### Screenshots
 
-Captured from a live run over the four sample supplier PDFs (Gemini 2.5 Flash).
+Captured from a live run over the four sample supplier PDFs (Gemini 2.5 Flash). The
+Leaderboard / Detailed scorecard / Run details shots are from the broken-input demo
+run (three suppliers ranked, one corrupt PDF excluded); `sample_data/sample_run_result.json`
+is a separate clean run with all four suppliers ranked. Absolute scores and PPI vary
+slightly between runs — the LLM judges content, the arithmetic on top is deterministic.
 
 **Criteria**
 ![Criteria screen](docs/screenshots/criteria.png)
@@ -227,7 +231,9 @@ Captured from a live run over the four sample supplier PDFs (Gemini 2.5 Flash).
    `main`). `.env`, `.streamlit/secrets.toml`, `data/rfp_eval.db`, `.venv/`,
    `__pycache__/` and `.DS_Store` are git-ignored.
 2. At [share.streamlit.io](https://share.streamlit.io) → **New app** → select the repo,
-   branch `main`, and `streamlit_app.py` as the entry point.
+   branch `main`, and `streamlit_app.py` as the entry point. Under **Advanced settings**
+   set the Python version to **3.13** (the pins were verified locally on 3.14, which
+   Cloud does not offer; 3.13 has wheels for every dependency).
 3. In **Advanced settings → Secrets**, paste (TOML — same format as the local
    `.streamlit/secrets.toml`):
    ```toml

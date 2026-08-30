@@ -24,10 +24,12 @@ python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# 3. Provide the API key (never commit this file)
+# 3. Provide the API key (either form works locally; both are git-ignored)
 cp .env.example .env
-#   then edit .env and set:
-#   GEMINI_API_KEY=your-key-here
+#   then set  GEMINI_API_KEY=your-key-here
+#   -- or, TOML form (same as Streamlit Cloud) --
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+#   then set  GEMINI_API_KEY = "your-key-here"
 
 # 4. Create and seed the SQLite database (schema + 5 default criteria)
 python database.py
@@ -214,16 +216,18 @@ _Add one screenshot per screen here after running locally:_
 
 ## 7. Deploy to Streamlit Community Cloud
 
-1. Push this repository to GitHub (public or private with Streamlit access granted).
-   `.env`, `data/rfp_eval.db`, `.venv/` and `__pycache__/` are git-ignored.
+1. Push this repository to GitHub — already at `AKSHATKOTWAL1122/RFP_Project` (branch
+   `main`). `.env`, `.streamlit/secrets.toml`, `data/rfp_eval.db`, `.venv/`,
+   `__pycache__/` and `.DS_Store` are git-ignored.
 2. At [share.streamlit.io](https://share.streamlit.io) → **New app** → select the repo,
-   branch, and `streamlit_app.py` as the entry point.
-3. In **Advanced settings → Secrets**, add:
+   branch `main`, and `streamlit_app.py` as the entry point.
+3. In **Advanced settings → Secrets**, paste (TOML — same format as the local
+   `.streamlit/secrets.toml`):
    ```toml
    GEMINI_API_KEY = "your-key-here"
    ```
-   (`evaluation_agent.py` reads `GEMINI_API_KEY` from the environment; Streamlit
-   injects secrets as env vars.)
+   `streamlit_app.py` copies this into `os.environ` on startup, so
+   `evaluation_agent.py` (plain `os.getenv`) picks it up unchanged.
 4. Deploy. On first boot the app calls `database.setup_database()` to create and seed
    `data/rfp_eval.db` in the container.
 5. Record the public URL here:

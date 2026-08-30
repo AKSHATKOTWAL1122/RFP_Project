@@ -20,7 +20,19 @@ from dotenv import load_dotenv
 import database
 from models import EXPERIENCE_RATING_MAX, EXPERIENCE_RATING_MIN
 
-load_dotenv()
+# Load .env from next to this file, overriding any empty/stale shell var of the
+# same name (a bare `GEMINI_API_KEY=` exported in the shell would otherwise win).
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"), override=True)
+
+# On Streamlit Community Cloud there is no .env — the key is supplied via
+# `.streamlit/secrets.toml` (Secrets in the app settings). Bridge it into the
+# environment so `evaluation_agent` (plain `os.getenv`) picks it up unchanged.
+for _k in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
+    try:
+        if _k in st.secrets and not os.getenv(_k):
+            os.environ[_k] = str(st.secrets[_k])
+    except Exception:
+        pass
 
 st.set_page_config(page_title="RFP Evaluation & Supplier Ranking", layout="wide")
 

@@ -1,0 +1,619 @@
+{
+  "rfp_run_id": "6b692120-70e1-470b-b6ff-e95896f2fa3a",
+  "status": "completed",
+  "created_at": "2026-08-30T08:04:11.830058+00:00",
+  "criterion_snapshot": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "description": "Architecture, integrations, scalability, technical fit",
+      "weight": 30.0,
+      "max_score": 10.0,
+      "is_active": true
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "description": "Timeline, milestones, staffing, risk plan",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": true
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "description": "Pricing clarity, total cost, assumptions",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": true
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "description": "Controls, certifications, privacy, auditability",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": true
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "description": "Support model, similar projects, references",
+      "weight": 10.0,
+      "max_score": 10.0,
+      "is_active": true
+    }
+  ],
+  "ranked_suppliers": [
+    {
+      "supplier_name": "Apex Systems",
+      "failed": false,
+      "warnings": [],
+      "risks": [
+        "Higher commercial cost than the indicative budget range.",
+        "16-week schedule depends on timely access to enterprise identity and data systems.",
+        "Custom integrations may require change requests outside the fixed fee.",
+        "Client provides timely access to identity, network, and test environments (an assumption, but a risk if not met).",
+        "Travel and third-party software are excluded unless explicitly listed (potential for unbudgeted costs)."
+      ],
+      "overall_summary": "Apex Systems presents a strong proposal for an enterprise workflow and analytics platform. Their technical solution is modern, scalable, and secure, built on a cloud-native microservices architecture with clear performance targets and robust encryption. The implementation plan is detailed, with a defined timeline, milestones, and a dedicated, skilled team, and they transparently identify key dependencies and risks. While the commercial proposal is clear and itemized, it explicitly notes a higher first-year cost and potential for additional charges for custom integrations and travel. Security and compliance are well-addressed with relevant certifications and controls. The support model is comprehensive, and relevant enterprise experience is cited. The proposal is well-structured and provides quantified details across most criteria.",
+      "criteria_snapshot": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "description": "Architecture, integrations, scalability, technical fit",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "description": "Timeline, milestones, staffing, risk plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "description": "Pricing clarity, total cost, assumptions",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "description": "Controls, certifications, privacy, auditability",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "description": "Support model, similar projects, references",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "is_active": true
+        }
+      ],
+      "scored_criteria": [
+        {
+          "criterion": {
+            "criterion_id": 1,
+            "name": "Technical Capability",
+            "description": "Architecture, integrations, scalability, technical fit",
+            "weight": 30.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.5,
+          "benchmark": 9.5,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "The proposal outlines a robust and modern technical architecture, featuring a cloud-native microservices design, multi-availability zone deployment, and REST APIs for key integrations. It specifies high scalability targets (10,000 concurrent users, 99.99% availability) and strong encryption standards (TLS 1.3, AES-256), demonstrating excellent technical capability and fit for an enterprise platform.",
+          "evidence": "Cloud-native microservices architecture deployed across multiple availability zones. REST APIs for integration with identity, ERP, CRM, and data warehouse systems. Horizontal scaling target of 10,000 concurrent users with a stated 99.99% service availability objective. Encryption in transit using TLS 1.3 and encryption at rest using AES-256."
+        },
+        {
+          "criterion": {
+            "criterion_id": 2,
+            "name": "Implementation Plan",
+            "description": "Timeline, milestones, staffing, risk plan",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.0,
+          "benchmark": 9.5,
+          "gap": -0.5,
+          "relative_pct": 94.73684210526315,
+          "justification": "The implementation plan is well-structured with a clear 16-week timeline, five distinct milestones, and specific outputs for each. A dedicated and appropriately staffed team of 8 is proposed, and the agile methodology with regular steering meetings and demonstrations is a positive. Key risks related to client access and custom integrations are explicitly identified.",
+          "evidence": "16-week implementation with five milestones: discovery, architecture, configuration, integration/UAT, and production readiness. Dedicated delivery team of 8: 1 program manager, 1 solution architect, 4 engineers, 1 QA lead, and 1 security specialist. Agile delivery with weekly steering meetings and fortnightly demonstrations. Risk controls: 16-week schedule depends on timely access to enterprise identity and data systems. Custom integrations may require change requests outside the fixed fee. Client provides timely access to identity, network, and test environments."
+        },
+        {
+          "criterion": {
+            "criterion_id": 3,
+            "name": "Commercial Value",
+            "description": "Pricing clarity, total cost, assumptions",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 8.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.88888888888889,
+          "justification": "The commercial proposal is clear and transparent, providing a detailed breakdown of costs for implementation, licensing, security hardening, and support, leading to a total Year 1 cost of $750,000. Assumptions for each item are specified. The proposal explicitly states a 'higher first-year cost' and clearly lists exclusions like optional custom connectors, travel, and third-party software, which could impact the total cost.",
+          "evidence": "Item: Implementation services $420,000 (Fixed fee for the 16-week implementation). Year 1 licensing $180,000 (Up to 10,000 named/active users; standard modules). Security hardening $55,000 (Includes architecture review and penetration-test coordination). Year 1 support $95,000 (24x7 enterprise support and 15-minute critical SLA). Total Year 1 $750,000. Excludes optional custom connectors and travel. Higher first-year cost. Custom integrations outside the listed standard interfaces are priced through change control. Travel and third-party software are excluded unless explicitly listed."
+        },
+        {
+          "criterion": {
+            "criterion_id": 4,
+            "name": "Security & Compliance",
+            "description": "Controls, certifications, privacy, auditability",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.5,
+          "benchmark": 9.5,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "Apex Systems demonstrates a strong commitment to security and compliance. They state SOC 2 Type II and ISO 27001 certifications, address GDPR-readiness and data retention, and detail robust controls such as role-based access control, centralized audit logs, encryption (at rest/in transit), and annual penetration testing. A rapid 15-minute incident escalation for critical events is also specified.",
+          "evidence": "SOC 2 Type II and ISO 27001 certified operating environment are stated. GDPR-ready data handling and documented data-retention controls are described. Role-based access control, centralized audit logs, encryption at rest/in transit, and annual penetration testing are included. Security incident escalation begins within 15 minutes for critical events."
+        },
+        {
+          "criterion": {
+            "criterion_id": 5,
+            "name": "Support & Experience",
+            "description": "Support model, similar projects, references",
+            "weight": 10.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.0,
+          "benchmark": 9.5,
+          "gap": -0.5,
+          "relative_pct": 94.73684210526315,
+          "justification": "The support model is comprehensive, offering 24x7 enterprise support with a 15-minute response target for severity-1 incidents, a named customer success manager, and quarterly service reviews. The proposal also provides references for two large enterprise deployments in regulated industries, including a multi-region rollout for a fictional retail bank, demonstrating relevant experience.",
+          "evidence": "24x7 enterprise support with a 15-minute response target for severity-1 incidents. Named customer success manager and quarterly service review. References are provided for two large enterprise deployments in regulated industries, including a multi-region rollout for a fictional retail bank."
+        }
+      ],
+      "absolute_score": 90.5,
+      "ppi": 96.19883040935673,
+      "final_rank": 1
+    },
+    {
+      "supplier_name": "NexaWorks",
+      "failed": false,
+      "warnings": [],
+      "risks": [
+        "Data migration quality depends on source-system completeness.",
+        "The 14-week schedule has several client decision gates that must be met.",
+        "Some advanced analytics capabilities are planned for a later release rather than day one.",
+        "Client subject-matter experts are available during UAT and migration validation."
+      ],
+      "overall_summary": "NexaWorks presents a well-structured and detailed proposal for the enterprise workflow and analytics platform. Its implementation plan and support model are particularly strong, featuring clear timelines, dedicated staffing, and comprehensive service level agreements. The technical architecture is modern and well-defined, though the proposal acknowledges it is less ambitious on scalability targets compared to a competitor. Commercials are transparent with itemized pricing and clearly stated assumptions. Security and compliance measures are robust, aligning with ISO 27001. The proposal demonstrates relevant experience through summarized references and an external experience rating. Key risks and assumptions are clearly articulated, providing a balanced view.",
+      "criteria_snapshot": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "description": "Architecture, integrations, scalability, technical fit",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "description": "Timeline, milestones, staffing, risk plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "description": "Pricing clarity, total cost, assumptions",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "description": "Controls, certifications, privacy, auditability",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "description": "Support model, similar projects, references",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "is_active": true
+        }
+      ],
+      "scored_criteria": [
+        {
+          "criterion": {
+            "criterion_id": 1,
+            "name": "Technical Capability",
+            "description": "Architecture, integrations, scalability, technical fit",
+            "weight": 30.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 8.0,
+          "benchmark": 9.5,
+          "gap": -1.5,
+          "relative_pct": 84.21052631578947,
+          "justification": "The proposal outlines a modern technical architecture with API-first integration, containerization, autoscaling, and managed database services. Specific scalability targets (8,000 concurrent users, 99.95% availability) and integration points (identity, CRM, ERP, reporting) are provided. However, the executive summary notes the technical architecture is 'less ambitious than Apex Systems on scalability targets,' which slightly tempers the score despite the concrete numbers provided.",
+          "evidence": "\u2022 Modular enterprise platform with API-first integration architecture.\n\u2022 Containerized application tier with autoscaling and managed database services.\n\u2022 Target capacity of 8,000 concurrent users with an availability target of 99.95%.\n\u2022 Integration approach covers identity, CRM, ERP, and reporting systems through standardized APIs.\n\u2022 'the technical architecture is less ambitious than Apex Systems on scalability targets.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 2,
+            "name": "Implementation Plan",
+            "description": "Timeline, milestones, staffing, risk plan",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.5,
+          "benchmark": 9.5,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "The implementation plan is exceptionally detailed, featuring a 14-week delivery timeline with seven clearly defined milestones, primary outputs, and exit criteria. The proposed team structure of 10 dedicated members is specified, along with governance mechanisms like a formal RAID log, dependency tracker, and regular meetings. Key risks related to data migration, client decision gates, and scope for advanced analytics are explicitly identified.",
+          "evidence": "\u2022 14-week delivery with seven clearly described milestones and exit criteria.\n\u2022 Team of 10: program manager, product owner, architect, 5 engineers, QA lead, and change/training lead.\n\u2022 Formal RAID log, dependency tracker, weekly steering committee, and twice-weekly delivery stand-up.\n\u2022 User acceptance criteria and production readiness checklist are explicitly described.\n\u2022 Risk controls: Data migration quality depends on source-system completeness; The 14-week schedule has several client decision gates that must be met; Some advanced analytics capabilities are planned for a later release rather than day one."
+        },
+        {
+          "criterion": {
+            "criterion_id": 3,
+            "name": "Commercial Value",
+            "description": "Pricing clarity, total cost, assumptions",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "The commercial proposal provides clear and itemized pricing for implementation services, Year 1 licensing, data migration, and Year 1 support, culminating in a transparent total Year 1 cost. Specific assumptions are detailed for each price item, such as user capacity for licensing and the number of source systems for migration. Overall assumptions regarding scope exclusions (advanced analytics) and client resource availability are also clearly stated.",
+          "evidence": "\u2022 Price table with specific items: Implementation services ($300,000), Year 1 licensing ($145,000), Data migration ($45,000), Year 1 support ($75,000).\n\u2022 Total Year 1: $565,000.\n\u2022 Assumptions for each item (Fixed fee, up to 10,000 users, two source systems, 24x7 support with 30-minute severity-1 response SLA).\n\u2022 Overall assumptions: 'Price includes two source-system migrations and standard enterprise integrations.'; 'Advanced analytics not listed in the base scope would be a later release/change request.'; 'Client subject-matter experts are available during UAT and migration validation.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 4,
+            "name": "Security & Compliance",
+            "description": "Controls, certifications, privacy, auditability",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 8.5,
+          "benchmark": 9.5,
+          "gap": -1.0,
+          "relative_pct": 89.47368421052632,
+          "justification": "NexaWorks demonstrates a strong commitment to security and compliance, detailing ISO 27001-aligned controls and annual independent penetration testing. Key security features like encryption (at rest and in transit), role-based access, MFA, and centralized logging are described. Privacy considerations, including review and data-retention configuration, are integrated into the implementation plan, and a documented severity model for security incidents is in place.",
+          "evidence": "\u2022 ISO 27001-aligned controls and annual independent penetration testing are stated.\n\u2022 Encryption at rest and in transit, role-based access, MFA, and centralized logging are described.\n\u2022 Privacy review and data-retention configuration are included in the implementation plan.\n\u2022 Security incidents have a documented severity model and escalation path.\n\u2022 'security position is well documented.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 5,
+            "name": "Support & Experience",
+            "description": "Support model, similar projects, references",
+            "weight": 10.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.5,
+          "benchmark": 9.5,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "The support model is comprehensive, offering 24x7 service desk support with a named service manager and a critical incident response SLA of 30 minutes. The proposal includes monthly service reporting, quarterly reviews, knowledge transfer, administrator training, and operating runbooks. NexaWorks also provides summaries of three references, including a fictional public-utility deployment, demonstrating relevant project experience. The external 'Supplier experience rating: 9 / 10' further supports their strong experience.",
+          "evidence": "\u2022 24x7 service desk with named service manager.\n\u2022 30-minute critical incident response SLA, monthly service reporting, and quarterly service reviews.\n\u2022 Knowledge transfer, administrator training, and operating runbooks are included.\n\u2022 Three references are summarized with project scope and outcomes, including a fictional public-utility deployment.\n\u2022 'Supplier experience rating: 9 / 10 (provided by procurement for demonstration).'"
+        }
+      ],
+      "absolute_score": 87.5,
+      "ppi": 93.15789473684211,
+      "final_rank": 2
+    },
+    {
+      "supplier_name": "BrightPath Tech",
+      "failed": false,
+      "warnings": [],
+      "risks": [
+        "Limited compliance evidence may require additional due diligence before award.",
+        "Fast 10-week timeline assumes standard integrations and rapid client decisions, which may not materialize.",
+        "Several implementation assumptions could create change requests, potentially increasing cost and timeline.",
+        "The risk plan is limited to a short escalation statement and does not provide a detailed risk register.",
+        "No specific current security certification is identified, raising concerns about security posture.",
+        "Limited information about audit logging, privacy governance, or independent testing.",
+        "Critical incident response lacks a numeric Service Level Agreement (SLA).",
+        "Only one client reference is provided, and its project scope and outcomes are not quantified, limiting evidence of relevant experience.",
+        "Complex custom integrations and extended premium support are additional costs not included in the base proposal."
+      ],
+      "overall_summary": "BrightPath Tech offers a commercially attractive proposal with the lowest price and a fast 10-week deployment timeline for a configurable SaaS workflow platform. The technical solution appears sound, with good integration capabilities and scalability. However, the proposal has significant weaknesses in security and compliance, providing very limited detail on controls, certifications, privacy, and auditability. The implementation plan, while clear, relies heavily on assumptions and lacks a detailed risk register. Furthermore, the supplier's experience and references are limited, with only one unquantified client reference. While strong on cost and speed, the lack of detail in critical areas like security and comprehensive risk management, coupled with limited experience, presents notable risks.",
+      "criteria_snapshot": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "description": "Architecture, integrations, scalability, technical fit",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "description": "Timeline, milestones, staffing, risk plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "description": "Pricing clarity, total cost, assumptions",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "description": "Controls, certifications, privacy, auditability",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "description": "Support model, similar projects, references",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "is_active": true
+        }
+      ],
+      "scored_criteria": [
+        {
+          "criterion": {
+            "criterion_id": 1,
+            "name": "Technical Capability",
+            "description": "Architecture, integrations, scalability, technical fit",
+            "weight": 30.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 8.0,
+          "benchmark": 9.5,
+          "gap": -1.5,
+          "relative_pct": 84.21052631578947,
+          "justification": "The proposed solution offers a configurable SaaS platform with flexible deployment options (single-tenant or shared), standard REST APIs, and prebuilt connectors, indicating good technical fit and integration capabilities. The 'configuration-first approach' aims to minimize custom development, which is a positive. Scalability is addressed with a target capacity of 5,000 concurrent users. The architecture seems sound for the stated requirements.",
+          "evidence": "\u2022 Single-tenant or shared SaaS deployment options with configurable workflows.\n\u2022 Standard REST APIs and prebuilt connectors for common business systems.\n\u2022 Target capacity of approximately 5,000 concurrent users.\n\u2022 Configuration-first approach intended to minimize custom development."
+        },
+        {
+          "criterion": {
+            "criterion_id": 2,
+            "name": "Implementation Plan",
+            "description": "Timeline, milestones, staffing, risk plan",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 6.5,
+          "benchmark": 9.5,
+          "gap": -3.0,
+          "relative_pct": 68.42105263157895,
+          "justification": "The implementation plan provides a clear, fast 10-week timeline with defined milestones and primary outputs. The core delivery team structure is outlined. However, the risk plan is explicitly stated as 'limited to a short escalation statement' and lacks a detailed risk register. Several critical assumptions are highlighted, which could lead to change requests and impact the timeline, reducing the overall strength of the plan.",
+          "evidence": "\u2022 10-week timeline with discovery, configuration, integration, testing, training, and go-live.\n\u2022 Delivery team listed as 1 project manager, 3 implementation consultants, and shared QA resources.\n\u2022 Daily stand-ups during configuration; weekly status reports.\n\u2022 Risk plan is limited to a short escalation statement and does not provide a detailed risk register.\n\u2022 Fast 10-week timeline assumes standard integrations and rapid client decisions.\n\u2022 Several implementation assumptions could create change requests."
+        },
+        {
+          "criterion": {
+            "criterion_id": 3,
+            "name": "Commercial Value",
+            "description": "Pricing clarity, total cost, assumptions",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "justification": "The commercial proposal is clear, with a detailed price table for implementation, licensing, training, and support, totaling $320,000 for Year 1. It explicitly states this is the 'Lowest offer in the demonstration set,' indicating strong commercial value. Assumptions for each item are clearly listed, providing transparency. However, the proposal notes that complex custom integrations and extended premium support are additional, which could increase the total cost if required.",
+          "evidence": "Item | Price | Assumptions\nImplementation services | $165,000 | Fixed fee; assumes standard configuration.\nYear 1 licensing | $95,000 | Up to 7,500 users; standard workflow modules.\nTraining | $20,000 | Four remote training sessions.\nYear 1 support | $40,000 | Business-hours support; premium option available.\nTotal Year 1 | $320,000 | Lowest offer in the demonstration set.\n\u2022 Price assumes standard configuration and standard connectors.\n\u2022 Complex custom integrations and extended premium support are additional."
+        },
+        {
+          "criterion": {
+            "criterion_id": 4,
+            "name": "Security & Compliance",
+            "description": "Controls, certifications, privacy, auditability",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 3.0,
+          "benchmark": 9.5,
+          "gap": -6.5,
+          "relative_pct": 31.57894736842105,
+          "justification": "The proposal provides very limited detail regarding security and compliance. While it mentions data encryption in transit and at rest, it lacks algorithm specifics. There are no specific current certifications identified, only a general 'alignment with common security practices.' Crucially, information on audit logging, privacy governance, independent testing, and numeric SLAs for critical incident response is missing or vague. This represents a significant gap in demonstrating robust security and compliance.",
+          "evidence": "\u2022 States that data will be encrypted in transit and at rest but does not provide algorithm detail.\n\u2022 Mentions alignment with common security practices; no specific current certification is identified.\n\u2022 Provides limited information about audit logging, privacy governance, or independent testing.\n\u2022 Critical incident response is described as 'priority handling' without a numeric SLA in the proposal.\n\u2022 Limited compliance evidence may require additional due diligence before award."
+        },
+        {
+          "criterion": {
+            "criterion_id": 5,
+            "name": "Support & Experience",
+            "description": "Support model, similar projects, references",
+            "weight": 10.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 5.0,
+          "benchmark": 9.5,
+          "gap": -4.5,
+          "relative_pct": 52.63157894736842,
+          "justification": "The support model is adequately described, offering business-hours help desk with an optional premium 24x7 service and standard customer success check-ins. However, the experience and references section is weak. Only one client reference is named at a high level, with no quantification of project scope or outcomes. The proposal itself acknowledges 'fewer supporting references than the other suppliers' and 'limited experience,' which aligns with the provided 'Supplier experience rating: 6 / 10'.",
+          "evidence": "\u2022 Business-hours help desk with optional premium 24x7 support.\n\u2022 Standard customer success check-ins are described.\n\u2022 One client reference is named at a high level, but project scope and outcomes are not quantified.\n\u2022 Fewer supporting references than the other suppliers.\n\u2022 Supplier experience rating: 6 / 10 (provided by procurement for demonstration)\n\u2022 Supplier synthetic profile: ...limited experience."
+        }
+      ],
+      "absolute_score": 66.0,
+      "ppi": 70.52631578947368,
+      "final_rank": 3
+    },
+    {
+      "supplier_name": "Orbit Digital",
+      "failed": false,
+      "warnings": [],
+      "risks": [
+        "Integration scope and interface catalog are not fully defined at proposal stage.",
+        "Some staffing is shared rather than fully dedicated.",
+        "Non-standard integrations may increase cost and schedule.",
+        "Pricing assumes interface inventory is finalized during discovery.",
+        "Non-standard integration patterns may require additional effort.",
+        "User volumes above the stated enterprise license assumptions may change subscription pricing.",
+        "Detailed entry/exit criteria for milestones are limited.",
+        "Risk management focuses on steering escalation and weekly status reporting rather than a detailed risk register.",
+        "Scalability is described as 'enterprise scale' without a quantified concurrency target.",
+        "Fewer implementation details on security controls than other proposals.",
+        "Privacy and retention policies are summarized without detailed control mapping."
+      ],
+      "overall_summary": "Orbit Digital proposes an enterprise workflow and analytics platform, demonstrating strong experience and a robust 24x7 support model. The commercial offer is clear, detailing Year 1 costs and assumptions, though it is noted as mid-range. The implementation plan provides a 13-week timeline and team structure, but lacks detailed entry/exit criteria for milestones and a comprehensive risk register. While ISO 27001 certified, the security section provides fewer implementation details on controls and privacy policy mapping compared to other proposals. A key area of concern is the technical capability, particularly the integration section, which is explicitly high-level and lacks specifics on APIs, interfaces, and technical dependencies, with scalability also lacking quantification. Several risks related to integration scope, staffing, and potential cost increases for non-standard integrations are identified.",
+      "criteria_snapshot": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "description": "Architecture, integrations, scalability, technical fit",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "description": "Timeline, milestones, staffing, risk plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "description": "Pricing clarity, total cost, assumptions",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "description": "Controls, certifications, privacy, auditability",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "is_active": true
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "description": "Support model, similar projects, references",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "is_active": true
+        }
+      ],
+      "scored_criteria": [
+        {
+          "criterion": {
+            "criterion_id": 1,
+            "name": "Technical Capability",
+            "description": "Architecture, integrations, scalability, technical fit",
+            "weight": 30.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 5.0,
+          "benchmark": 9.5,
+          "gap": -4.5,
+          "relative_pct": 52.63157894736842,
+          "justification": "The proposed solution offers an enterprise workflow platform with configurable modules, API/file-based integration, and high availability through redundant services. However, the proposal explicitly states that the integration section is high-level, lacking specifics on APIs, interfaces, and technical dependencies. Scalability is described as 'enterprise scale' without quantification, and the proposal itself notes 'moderate for technical integration' and that 'Several architecture details are intentionally left high-level.'",
+          "evidence": "Page 1: 'the integration section remains high-level and provides fewer specifics on APIs, interfaces, technical dependencies, and integration testing than the other proposals.' Page 2: 'Enterprise workflow platform with configurable modules and centralized administration.' 'Supports API integration and file-based exchange with external systems; detailed interface catalog to be finalized during discovery.' 'Scalability is described as \"enterprise scale\" without a quantified concurrency target.' 'High availability is supported through redundant application services.' Page 3: 'Evidence quality: ... moderate for technical integration. Several architecture details are intentionally left high-level.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 2,
+            "name": "Implementation Plan",
+            "description": "Timeline, milestones, staffing, risk plan",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 6.0,
+          "benchmark": 9.5,
+          "gap": -3.5,
+          "relative_pct": 63.1578947368421,
+          "justification": "The proposal outlines a clear 13-week target schedule with defined milestones and primary outputs. A core team of 7 named roles is specified, with specialist resources available on demand. However, the proposal acknowledges that 'detailed entry/exit criteria are limited' for milestones and that 'Risk management focuses on steering escalation and weekly status reporting rather than a detailed risk register.' Specific risks like an undefined integration scope and shared staffing are identified.",
+          "evidence": "Page 2: '13-week target schedule across discovery, configuration, integration, testing, training, and go-live.' 'Milestones are listed, but detailed entry/exit criteria are limited.' 'Team of 7 named roles, with specialist resources available on demand.' 'Core team: program manager, solution architect, four consultants, QA lead; specialist security and integration resources available on demand.' 'Risk management focuses on steering escalation and weekly status reporting rather than a detailed risk register.' 'Risk controls: Integration scope and interface catalog are not fully defined at proposal stage. Some staffing is shared rather than fully dedicated. Non-standard integrations may increase cost and schedule.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 3,
+            "name": "Commercial Value",
+            "description": "Pricing clarity, total cost, assumptions",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 8.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.88888888888889,
+          "justification": "The commercial proposal provides a clear breakdown of Year 1 costs totaling $590,000, itemized across implementation, licensing, integration, and support. Specific assumptions are clearly stated for each item and in a dedicated section, addressing potential changes for non-standard integrations and user volumes. The proposal notes the commercial offer as 'mid-range' or 'medium pricing'.",
+          "evidence": "Page 3: 'Item: Implementation services, Price: $285,000, Assumptions: Estimated fixed fee subject to confirmed interfaces.' 'Item: Year 1 licensing, Price: $155,000, Assumptions: Enterprise license; user volumes to be confirmed.' 'Item: Integration package, Price: $80,000, Assumptions: Covers standard interface patterns.' 'Item: Year 1 support, Price: $70,000, Assumptions: 24x7 support; standard priority SLA.' 'Total Year 1: $590,000, Potential change requests for non-standard integrations.' 'Assumptions and Exclusions: Pricing assumes interface inventory is finalized during discovery. Non-standard integration patterns may require additional effort. User volumes above the stated enterprise license assumptions may change subscription pricing.' Page 1: 'The commercial offer is mid-range.' 'medium pricing.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 4,
+            "name": "Security & Compliance",
+            "description": "Controls, certifications, privacy, auditability",
+            "weight": 20.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 6.0,
+          "benchmark": 9.5,
+          "gap": -3.5,
+          "relative_pct": 63.1578947368421,
+          "justification": "The proposal states ISO 27001 certification for the operating organization, which is a strong point. It mentions key security controls such as encryption, role-based access, and audit logs, and commits to annual security testing. However, it explicitly notes that it 'gives fewer implementation details than Apex Systems or NexaWorks' and that 'Privacy and retention policies are summarized without detailed control mapping,' indicating a lack of depth in the description of control implementation and privacy specifics.",
+          "evidence": "Page 3: 'ISO 27001 certification is stated for the operating organization.' 'Mentions encryption, role-based access and audit logs, but gives fewer implementation details than Apex Systems or NexaWorks.' 'Privacy and retention policies are summarized without detailed control mapping.' 'Annual security testing is stated, with detailed findings shared under NDA in a real engagement.'"
+        },
+        {
+          "criterion": {
+            "criterion_id": 5,
+            "name": "Support & Experience",
+            "description": "Support model, similar projects, references",
+            "weight": 10.0,
+            "max_score": 10.0,
+            "is_active": true
+          },
+          "score": 9.0,
+          "benchmark": 9.5,
+          "gap": -0.5,
+          "relative_pct": 94.73684210526315,
+          "justification": "Orbit Digital presents a strong support model, including 24x7 enterprise support, a named service manager, and regional escalation coverage with a standard priority SLA. The supplier's experience is highlighted as 'strong' and 'mature' with 'extensive references.' Four references are summarized across diverse industries (banking, utilities, logistics), including repeat customers and a stated 97% renewal rate. The proposal also notes a 'Supplier experience rating: 10 / 10 (provided by procurement for demonstration)' and 'strong for experience/support' in its evidence quality note.",
+          "evidence": "Page 3: '24x7 enterprise support, named service manager, and regional escalation coverage.' 'Year 1 support: $70,000, 24x7 support; standard priority SLA.' 'Four references are summarized across banking, utilities, and logistics.' 'References include repeat customers and a stated 97% renewal rate, but no customer names are disclosed in this fictional proposal.' Page 1: 'Supplier experience rating: 10 / 10 (provided by procurement for demonstration)' 'Strong experience and references' 'mature supplier profile with extensive references and a strong support organization.' Page 3: 'Evidence quality: strong for experience/support'"
+        }
+      ],
+      "absolute_score": 64.0,
+      "ppi": 68.30409356725147,
+      "final_rank": 4
+    }
+  ],
+  "excluded_suppliers": []
+}
